@@ -4,7 +4,7 @@
 
 ```mermaid
 classDiagram
-    class Appointment {
+    class Scheduling {
         - String id
         - Date date
         - Client client
@@ -23,6 +23,6 @@ classDiagram
         - String price
     }
 
-    Appointment --> Client : client
-    Appointment --> Barber : barber
+    Scheduling --> Client : client
+    Scheduling --> Barber : barber
 ```
