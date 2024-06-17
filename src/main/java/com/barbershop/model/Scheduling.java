@@ -10,11 +10,12 @@ public class Scheduling {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date date;
+    private String date;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Client client;
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Barber barber;
 
     public Long getId() {
@@ -25,11 +26,11 @@ public class Scheduling {
         this.id = id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
